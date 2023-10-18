@@ -31,7 +31,10 @@ window.title("Start where 2 is 3")  # Add a title to the window
 
 # Create the label above the text boxes
 label = tk.Label(window, text="Unlock the function", font=("Arial", 16))
+label2 = tk.Label(window, text="Password hint: Start where 2 is 3", font=("Arial", 16))
+
 label.grid(row=0, column=0, columnspan=6, pady=10)
+label2.grid(row=1, column=0, columnspan=6, pady=10)
 
 # Create the text boxes
 textboxes = [tk.Entry(window, width=5, font=("Arial", 16)) for _ in range(6)]
@@ -39,7 +42,7 @@ textboxes = [tk.Entry(window, width=5, font=("Arial", 16)) for _ in range(6)]
 
 # Position the text boxes in a grid layout
 for i, textbox in enumerate(textboxes):
-    textbox.grid(row=1, column=i, padx=10, pady=10)
+    textbox.grid(row=2, column=i, padx=10, pady=10)
     textbox.insert(0, str(i))
 
 # Create the lock icon label
@@ -54,9 +57,9 @@ button = tk.Button(window, text="Check Values", command=check_values)
 result_label = tk.Label(window, text="", font=("Arial", 16))
 
 # Position the lock icon label, button, and result label in the grid layout
-lock_label.grid(row=2, column=1, padx=10, pady=10)
-button.grid(row=2, column=2, padx=10, pady=10)
-result_label.grid(row=3, column=2, padx=10, pady=10)
+lock_label.grid(row=3, column=1, padx=10, pady=10)
+button.grid(row=3, column=2, padx=10, pady=10)
+result_label.grid(row=4, column=2, padx=10, pady=10)
 
 # Start the main loop
 window.mainloop()
